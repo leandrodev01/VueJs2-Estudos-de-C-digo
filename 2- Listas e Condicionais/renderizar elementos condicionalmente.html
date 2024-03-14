@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Curso vue</title>
+     <script type="text/javascript" src="https://unpkg.com/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li>Olá VueJs</li>
+            <li>Item 1</li>
+            <template v-if="mostrar">
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </template>
+        </ul>
+       
+    </div>
+
+    <script type="text/javascript">
+    
+        new Vue({
+            el: '#app',
+            data: {
+                mostrar: true
+            },
+            
+        });
+
+    </script>
+    
+</body>
+</html>
