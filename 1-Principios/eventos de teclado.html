@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Curso vue</title>
+     <script type="text/javascript" src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">
+         <p></p>
+         <input v-on:keyup="onkey" placeholder="Qualquer tecla">
+         <br>
+         <input v-on:keyup.enter=" onkey" placeholder="Tecla Enter">
+         <br>
+         <input v-on:keyup.enter.esc=" onkey" placeholder="Tecla Enter ou Escape">
+         <br>
+         <input v-on:keyup.arrow-up=" onkey" placeholder="Tecla Seta para cima">
+         <br>
+         <input v-on:keyup.ctrl.enter.exact=" onkey" placeholder="Tecla Ctrl + Enter(exact)">
+    </div>
+
+    <script type="text/javascript">
+    
+        new Vue({
+            el: '#app',
+            data: {
+                
+            },
+            methods: {
+                onkey: function(event) {
+                    console.log('Tecla' + even.key + 'pressionada!');
+                }
+                
+            }
+        });
+
+    </script>
+    
+</body>
+</html>
