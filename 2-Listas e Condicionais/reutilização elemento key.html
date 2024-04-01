@@ -1,0 +1,43 @@
+<!--
+Essa propriedade pode ser usada em tela de login:
+Nome de usuário/Email + senha cadastrada ;
+Chave de acesso por email;
+Bastando configurar e alternar 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>Curso vue</title>
+     <script type="text/javascript" src="https://unpkg.com/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <button @click="login = !login">Toggle</button>
+        <template v-if="login">
+            <label>Login:</label>
+            <input placeholder="Login" Key="campo-login">
+
+        </template>
+        <template v-else>
+            <label>Email:</label>
+            <input placeholder="Email" key="campo-email">
+        </template>
+    </div>
+
+    <script type="text/javascript">
+    
+        new Vue({
+            el: '#app',
+            data: {
+               login: true
+             
+            },
+            
+                
+        });
+
+    </script>
+    
+</body>
+</html>
